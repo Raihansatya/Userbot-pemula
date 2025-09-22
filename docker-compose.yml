@@ -1,0 +1,19 @@
+<<<<<<< SEARCH
+=======
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-user-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./.env:/app/.env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+>>>>>>> REPLACE
